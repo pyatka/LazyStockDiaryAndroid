@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/symbolListFragment">
+
+    <fragment
+        android:id="@+id/symbolListFragment"
+        android:name="com.example.lazystockdiaryandroid.SymbolListFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_symbol_list">
+        <action
+            android:id="@+id/action_symbolListFragment_to_symbolSearchFragment"
+            app:destination="@id/symbolSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/symbolSearchFragment"
+        android:name="com.example.lazystockdiaryandroid.SymbolSearchFragment"
+        android:label="fragment_symbol_search"
+        tools:layout="@layout/fragment_symbol_search" >
+    </fragment>
+    <fragment
+        android:id="@+id/buySymbolFragment"
+        android:name="com.example.lazystockdiaryandroid.BuySymbolFragment"
+        android:label="fragment_buy_symbol"
+        tools:layout="@layout/fragment_buy_symbol">
+    </fragment>
+</navigation>
